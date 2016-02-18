@@ -13,6 +13,7 @@
 		37AD6B921C75F11A004150BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AD6B901C75F11A004150BB /* Main.storyboard */; };
 		37AD6B941C75F11A004150BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AD6B931C75F11A004150BB /* Assets.xcassets */; };
 		37AD6B971C75F11A004150BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AD6B951C75F11A004150BB /* LaunchScreen.storyboard */; };
+		37AD6BA01C75FBF7004150BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AD6B9F1C75FBF7004150BB /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		37AD6B931C75F11A004150BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37AD6B961C75F11A004150BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37AD6B981C75F11A004150BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AD6B9E1C75FBF7004150BB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		37AD6B9F1C75FBF7004150BB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				37AD6B8B1C75F11A004150BB /* AppDelegate.m */,
 				37AD6B8D1C75F11A004150BB /* ViewController.h */,
 				37AD6B8E1C75F11A004150BB /* ViewController.m */,
+				37AD6B9E1C75FBF7004150BB /* DetailViewController.h */,
+				37AD6B9F1C75FBF7004150BB /* DetailViewController.m */,
 				37AD6B901C75F11A004150BB /* Main.storyboard */,
 				37AD6B931C75F11A004150BB /* Assets.xcassets */,
 				37AD6B951C75F11A004150BB /* LaunchScreen.storyboard */,
@@ -153,6 +158,7 @@
 				37AD6B8F1C75F11A004150BB /* ViewController.m in Sources */,
 				37AD6B8C1C75F11A004150BB /* AppDelegate.m in Sources */,
 				37AD6B891C75F11A004150BB /* main.m in Sources */,
+				37AD6BA01C75FBF7004150BB /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +309,7 @@
 				37AD6B9D1C75F11A004150BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

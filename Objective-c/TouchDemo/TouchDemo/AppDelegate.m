@@ -17,7 +17,24 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setTouchShortcut];
     return YES;
+}
+
+- (void)setTouchShortcut
+{
+    UIApplicationShortcutItem *firstItem = [[UIApplicationShortcutItem alloc] initWithType:@"first" localizedTitle:@"First Title" localizedSubtitle:@"First Descibe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeDate] userInfo:nil];
+    UIApplicationShortcutItem *secondItem = [[UIApplicationShortcutItem alloc] initWithType:@"second" localizedTitle:@"Second Title" localizedSubtitle:@"Second Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome] userInfo:nil];
+    UIApplicationShortcutItem *thirdItem = [[UIApplicationShortcutItem alloc] initWithType:@"third" localizedTitle:@"Third Title" localizedSubtitle:@"Third Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove] userInfo:nil];
+    
+    
+    NSArray *items = @[firstItem, secondItem, thirdItem];
+    [UIApplication sharedApplication].shortcutItems = items;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
