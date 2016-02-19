@@ -23,9 +23,9 @@
 
 - (void)setTouchShortcut
 {
-    UIApplicationShortcutItem *firstItem = [[UIApplicationShortcutItem alloc] initWithType:@"first" localizedTitle:@"First Title" localizedSubtitle:@"First Descibe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeDate] userInfo:nil];
-    UIApplicationShortcutItem *secondItem = [[UIApplicationShortcutItem alloc] initWithType:@"second" localizedTitle:@"Second Title" localizedSubtitle:@"Second Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome] userInfo:nil];
-    UIApplicationShortcutItem *thirdItem = [[UIApplicationShortcutItem alloc] initWithType:@"third" localizedTitle:@"Third Title" localizedSubtitle:@"Third Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove] userInfo:nil];
+    UIApplicationShortcutItem *firstItem = [[UIApplicationShortcutItem alloc] initWithType:@"Red" localizedTitle:@"Red Title" localizedSubtitle:@"Red Descibe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeDate] userInfo:nil];
+    UIApplicationShortcutItem *secondItem = [[UIApplicationShortcutItem alloc] initWithType:@"Yellow" localizedTitle:@"Yellow Title" localizedSubtitle:@"Yellow Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome] userInfo:nil];
+    UIApplicationShortcutItem *thirdItem = [[UIApplicationShortcutItem alloc] initWithType:@"Blue" localizedTitle:@"Blue Title" localizedSubtitle:@"Blue Describe" icon:[UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove] userInfo:@{@"name":@"haha"}];
     
     //haha
     NSArray *items = @[firstItem, secondItem, thirdItem];
@@ -34,7 +34,7 @@
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
 {
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"shortcutItemTouched" object:shortcutItem.type];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

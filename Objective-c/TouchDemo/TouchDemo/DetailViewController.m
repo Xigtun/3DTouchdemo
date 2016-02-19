@@ -18,11 +18,11 @@
 {
     self = [super init];
     if (self) {
-        if ([identifier isEqualToString:@"1"]) {
+        if ([identifier isEqualToString:@"Red"]) {
             self.view.backgroundColor = [UIColor redColor];
-        } else if ([identifier isEqualToString:@"2"]) {
+        } else if ([identifier isEqualToString:@"Yellow"]) {
             self.view.backgroundColor = [UIColor yellowColor];
-        } else if ([identifier isEqualToString:@"3"]) {
+        } else if ([identifier isEqualToString:@"Blue"]) {
             self.view.backgroundColor = [UIColor blueColor];
         }
         
@@ -34,6 +34,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (NSArray<id<UIPreviewActionItem>> *)previewActionItems
+{
+    UIPreviewAction *actionOne = [UIPreviewAction actionWithTitle:@"Action One" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    UIPreviewAction *actionTwo = [UIPreviewAction actionWithTitle:@"Action Two" style:UIPreviewActionStyleSelected handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    UIPreviewAction *actionThree = [UIPreviewAction actionWithTitle:@"Action Three" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        
+    }];
+    
+    return @[actionOne, actionTwo, actionThree];
 }
 
 - (void)didReceiveMemoryWarning {
