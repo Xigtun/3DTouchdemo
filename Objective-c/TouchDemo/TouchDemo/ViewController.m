@@ -74,14 +74,25 @@
     DetailViewController *detailController = [[DetailViewController alloc] initWithIdentifier:controllerTitle];
     previewingContext.sourceRect = cell.frame;
     
-    
-    
+    UILabel *titleView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(detailController.view.frame), 35)];
+    titleView.text = controllerTitle;
+    titleView.textAlignment = NSTextAlignmentCenter;
+    titleView.backgroundColor = [UIColor whiteColor];
+    titleView.tag = 1234;
+    [detailController.view addSubview:titleView];
+
     return detailController;
 }
 
 - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
 {
-    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+    for (UILabel *label in viewControllerToCommit.view.subviews) {
+        if (label.tag == 1234) {
+            [label removeFromSuperview];
+        }
+    }
+
+    [self showViewController:viewControllerToCommit sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
