@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
-        
+        NSNotificationCenter.defaultCenter().postNotificationName("shortcutItemTouched", object: shortcutItem.type)
     }
     
     func applicationWillResignActive(application: UIApplication) {
